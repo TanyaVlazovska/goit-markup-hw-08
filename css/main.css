@@ -381,6 +381,10 @@ textarea {
   right: 10px;
 }
 
+.mobile-menu__nav {
+  margin-bottom: 306px;
+}
+
 .mobile-menu__link {
   display: block;
   padding-bottom: 32px;
@@ -395,15 +399,60 @@ textarea {
   color: var(--accent-color);
 }
 
-mobile-menu__contacts-link-tel {
+.mobile-menu__contacts-link-email {
   display: block;
   margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.mobile-menu__contacts-link-tel {
+  display: block;
+  margin-bottom: 64px;
   font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--accent-color);
+}
+
+.mobile-menu__socials {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.mobile-menu__socials-link {
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  text-decoration: none;
+  width: 22px;
+  height: 0px;
+  left: 214px;
+  top: 726px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate 90deg;
+          transform: rotate 90deg;
+}
+.mobile-menu__socials-link--current::before, .mobile-menu__socials-link--current::after {
+  width: 22px;
+  height: 0px;
+  left: 214px;
+  top: 726px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-transform: rotate 90deg;
+          transform: rotate 90deg;
+  position: absolute;
+  display: block;
+  background: currentColor;
 }
 
 .header {
