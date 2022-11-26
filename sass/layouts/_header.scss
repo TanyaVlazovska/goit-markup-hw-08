@@ -3,8 +3,13 @@
 }
 
 .header__container {
+    position: relative;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+        height: 60px;
+    }
 }
 
 .header__navigation {
@@ -15,6 +20,11 @@
 }
 
  .header__burger-menu {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    background-color: var(--title-white-color);
      @media (min-width: 768px) {
          display: none;
      }
@@ -68,7 +78,6 @@
 }
 
 
-
 .menu__item {
 
     margin-right: 50px;
@@ -77,7 +86,6 @@
         margin-right: 0;
     }
 }
-
 
 .menu__link {
     position: relative;
@@ -112,27 +120,94 @@
         border-radius: 2px;
     }
 
-}
-
-
+        @include desktop {
+            flex-direction: row;
+            gap: 50px;
+        }
+ }
 
 /*-------------Контакти у шапці ----------*/
 
-.contacts {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+
+
+//         .contacts__link {
+//             display: flex;
+//             align-items: center;
+//             /*
+//         padding-top: 32px;
+//         padding-bottom: 32px;
+//         */
+    
+//             font-weight: 500;
+//             font-size: 12px;
+//             line-height: 1.67;
+//             letter-spacing: 0.02em;
+//             color: var(--primary-text-color);
+//             text-decoration: none;
+    
+//             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+//             @include desktop {
+//             font-size: 14px;
+//             line-height: 1.14;
+//             }
+    
+//             &:hover,
+//             &:focus {
+//                 color: var(--accent-color);
+//             }
+//         }
+    
+//         .contacts__icon {
+//             margin-right: 10px;
+    
+//             fill: currentColor;
+//         }
+    
+//         .contacts__icon--email {
+//             width: 14px;
+//             height: 10px;
+    
+//             @include desktop {
+//                 width: 16px;
+//                 height: 12px;
+//             }
+//         }
+    
+//         .contacts__icon--phone {
+//             width: 10px;
+//             height: 14px;
+    
+//             @include desktop {
+//                 width: 10px;
+//                 height: 16px;
+//             }
+//         }
+
+
+// /*-------------Контакти у шапці ----------*/
+
+ .contacts {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        align-items: column;
+        margin-left: 10px;
+    }
 }
 
-.contacts__item:not(:last-child) {
-    margin-right: 50px;
-}
+
+
+ .contacts__item:not(:last-child) {
+     margin-right: 50px;
+ }
 
 .contacts__link {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
 
     font-weight: 500;
     line-height: 1.14;
@@ -145,7 +220,6 @@
             color: var(--accent-color);
         }
 }
-
 
 .contacts__icon {
     margin-right: 10px;
