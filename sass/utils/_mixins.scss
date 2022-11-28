@@ -24,13 +24,26 @@
 }
 
 @mixin tablet {
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
         @content;
     }
+}
+
+@mixin retina {
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
+@mixin calc-width($count, $gap) {
+    width: calc((100% - $gap * ($count - 1)) / $count);
 }
