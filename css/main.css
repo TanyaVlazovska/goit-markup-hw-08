@@ -722,15 +722,36 @@ textarea {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 
 .header__logo {
-  margin-right: 93px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .logo__second-part {
@@ -794,7 +815,6 @@ textarea {
   }
 }
 
-/*-------------Контакти у шапці ----------*/
 .contacts {
   display: none;
 }
@@ -1195,41 +1215,37 @@ textarea {
 }
 
 /* ---------------Постійні клієнти----------- */
-.section-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 @media screen and (min-width: 1200px) {
-  .section-container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  .icons {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
-.icon-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-.icon-list__link:hover, .icon-list__link:focus {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
-}
-
-.icon-list__item {
-  width: calc(100% - 25px);
-}
-
-.icon-list__link {
-  width: 170px;
+.icons__item {
+  width: calc((100% - 30px) / 2);
   height: 92px;
+}
+@media screen and (min-width: 768px) {
+  .icons__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .icons__item {
+    width: calc((100% - 150px) / 6);
+  }
+}
+
+.icons__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1239,58 +1255,22 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: var(--icons-background);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.icon-list__icon {
-  fill: currentColor;
-}
-
-.icon-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
-}
-.icon-list__link:hover, .icon-list__link:focus {
-  border-color: var(--accent-color);
+.icons__link:hover, .icons__link:focus {
   color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-.icon-list__item {
-  width: calc(100% - 25px);
-}
-
-.icon-list__link {
-  width: 170px;
-  height: 92px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  color: var(--icons-background);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-list__icon {
+.icons__icon {
+  width: 106px;
+  height: 60px;
   fill: currentColor;
 }
 
@@ -1453,6 +1433,7 @@ textarea {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    text-align: left;
   }
 }
 
@@ -1485,6 +1466,11 @@ textarea {
         -ms-flex-pack: justify;
             justify-content: space-between;
     gap: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__address {
     margin-right: 70px;
   }
 }

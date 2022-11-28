@@ -20,13 +20,15 @@
         text-align: center;
         display: flex;
         align-items: baseline;
+
+        text-align: left;
     }
 }
 
 .footer__info {
     display: flex;
-        flex-direction: column;
-        gap: 60px;
+    flex-direction: column;
+    gap: 60px;
 
     @include tablet {
         flex-direction: row;
@@ -37,16 +39,15 @@
         align-items: baseline;
         justify-content: space-between;
         gap: 0;
-        margin-right: 70px;
+        
     }
-
 }
 
-// .footer__address {
-//     @include desktop {
-//         margin-right: 70px;
-//     }
-// }
+.footer__address {
+    @include desktop {
+        margin-right: 70px;
+    }
+}
 
 .footer__logo {
     display: block;
