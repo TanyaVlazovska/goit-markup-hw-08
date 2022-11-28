@@ -16,22 +16,22 @@
     @include desktop {
             flex-wrap: nowrap;
     }
-    &__item {
-    @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 60px) / 2);
-                                }
-    
-    @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 90px) / 4);
-                            }
-    
-    &:not(:last-child) {
-    @media screen and (max-width: 767.98px) {
-    margin-bottom: 30px;
-         }       
-   }
 
-   &__wrap {
+    .card-list__item {
+        @include calc-width(1, 30px);
+        
+            @include tablet {
+                @include calc-width(2, 30px);
+            }
+        
+            @include desktop {
+                @include calc-width(4, 30px);
+            }
+   
+         }       
+  }
+
+   .card-list__wrap {
          display: flex;
         justify-content: center;
         align-items: center;
@@ -40,11 +40,11 @@
         height: 120px;
         margin-bottom: 30px;
     
-        background: var(--light-bg-color);
+        background: var(--ligt-background-color);
         border-radius: 4px;
    }
 
-   &__title {
+   .card-list__title {
 
     margin-bottom: 10px;
     
@@ -54,7 +54,12 @@
         text-transform: uppercase;
         color: var(--title-text-color);
         text-align: center;
+
+        @include tablet {
+        text-align: left;
    }
+
+
 
    &__describe {
        line-height: 1.71;
@@ -126,5 +131,5 @@
 //     line-height: 1.71;
 //     letter-spacing: 0.03em;
 //     text-transform: none; }
-    }
+    
 
