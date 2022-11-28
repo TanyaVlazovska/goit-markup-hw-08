@@ -10,12 +10,43 @@
 
 .footer__container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    text-align: center;
+
+    @include desktop {
+        flex-direction: row;
+        text-align: center;
+        display: flex;
+        align-items: baseline;
+    }
 }
 
-.footer__left {
-    margin-right: 70px;
+.footer__info {
+    display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    @include desktop {
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0;
+        margin-right: 70px;
+    }
+
 }
+
+// .footer__address {
+//     @include desktop {
+//         margin-right: 70px;
+//     }
+// }
 
 .footer__logo {
     display: block;
@@ -48,7 +79,9 @@
 
 
 .footer-social-block {
+    @include desktop {
     margin-right: 93px;
+    }
 }
 
 .social-block-title {
@@ -63,6 +96,7 @@
 
 .social-icons {
     display: flex;
+    justify-content: center;
 }
 
 .social-icon-item {
@@ -99,8 +133,16 @@
 
 .form-subscribe {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
 }
 
 .subscribe-label {
@@ -108,6 +150,7 @@
 }
 
 .subscribe-title {
+    display: block;
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -119,7 +162,7 @@
 }
 
 .subscribe-email {
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding: 15px 16px;
 
@@ -135,6 +178,14 @@
     &::placeholder {
             color: rgba(255, 255, 255, 0.6);
         }
+
+    @include tablet {
+        width: 450px;
+    }
+
+    @include desktop {
+        width: 358px;
+    }
 }
 
 .subscribe-send-btn {
@@ -157,6 +208,10 @@
     &:focus {
         background-color: var(--button-color);
         }
+
+    @include desktop {
+        margin: 0;
+    }
 }
 
 .subscribe-send-title {

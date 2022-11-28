@@ -62,6 +62,39 @@
           </li>
         </ul>
       </div>
+
+      <div class="menu-container js-menu-container">
+        <div class="container">
+          <button class="icon-menu-close js-close-menu">
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-close-black-new"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu list">
+            <li class="item"><a href="./index.html" class="link current">Студія</a></li>
+            <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+            <li class="item"><a href="" class="link">Контакти</a></li>
+          </ul>
+
+          <div>
+            <ul class="mobile-menu-contacts list">
+              <li class="item mobile-menu-phone">
+                <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="item mobile-menu-email">
+                <a class="link" href="mail:info@devstudio.com">info@devstudio.com</a>
+              </li>
+            </ul>
+
+            <ul class="mobile-menu-networks list">
+              <li class="item"><a class="link" href="">Instagram</a></li>
+              <li class="item"><a class="link" href="">Twitter</a></li>
+              <li class="item"><a class="link" href="">Facebook</a></li>
+              <li class="item"><a class="link" href="">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="hero hero__section">
@@ -157,9 +190,8 @@
           </ul>
         </div>
       </section>
-      -->
-
-      <!-- <section class="command section--bg-light section">
+    
+       <section class="command section--bg-light section">
         <div class="container">
           <h2 class="title section__title">Наша команда</h2>
           <ul class="people-list list">
@@ -181,7 +213,7 @@
                 class="people-list__img"
                 src="./images/member-1.jpg"
                 alt="Фото Ігора Дем'яненка"
-                width="450"
+                width="270"
               />
               <div class="people-list__info">
                 <h3 class="people-list__title">Ігор Дем'яненко</h3>
@@ -236,7 +268,7 @@
                   class="people-list__img"
                   src="./images/member-2.jpg"
                   alt="Ольга Рєпіна"
-                  width="450"
+                  width="270"
                 />
               </picture>
               <div class="people-list__info">
@@ -292,7 +324,7 @@
                 class="people-list__img"
                 src="./images/member-3.jpg"
                 alt="Фото Миколи Тарасова"
-                width="450"
+                width="270"
               />
               </picture>
 
@@ -349,7 +381,7 @@
                   class="people-list__img"
                   src="./images/member-4.jpg"
                   alt="Михайло Єрмаков"
-                  width="450"
+                  width="270"
                 />
               </picture>
               
@@ -390,7 +422,7 @@
             </li>
           </ul>
         </div>
-      </section>-->
+      </section>
 
       <!--      _clients      -- -->
       <!-- <section class="section section-container">
@@ -443,31 +475,34 @@
         </div>
       </section>-->
     </main>
-    <!-- <footer class="footer">
+
+    <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__left">
-          <a class="logo footer__logo" href="./index.html"
-            >Web<span class="logo__second-part logo__second-part--footer">Studio</span></a
-          >
-          <address>
-            <ul class="address list">
-              <li class="address__item">
-                <a class="address__link" href="https://goo.gl/maps/BLsoYbR85hRVmDrb9"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
-              </li>
-              <li class="address__item">
-                <a class="address__link address__link--contacts" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="address__item">
-                <a class="address__link address__link--contacts" href="+380961111111"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
+        <div class="footer__info">
+          <div class="footer__address">
+            <a class="logo footer__logo" href="./index.html"
+              >Web<span class="logo__second-part logo__second-part--footer">Studio</span></a
+            >
+            <address>
+              <ul class="address list">
+                <li class="address__item">
+                  <a class="address__link" href="https://goo.gl/maps/BLsoYbR85hRVmDrb9"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link address__link--contacts" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link address__link--contacts" href="+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
         </div>
         <div class="footer-social-block">
           <p class="social-block-title">Приєднуйтесь</p>
@@ -515,7 +550,7 @@
           </button>
         </form>
       </div>
-    </footer>-->
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -581,56 +616,6 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
-    <div class="mobile-menu js-menu-container">
-      <div class="container">
-        <button class="mobile-menu__close-button js-close-menu">
-          <svg class="close-icon" width="40" height="40">
-            <use href="./images/icons.svg#icon-close-black-new"></use>
-          </svg>
-        </button>
-        <nav class="mobile-menu__nav">
-          <ul class="list">
-            <li>
-              <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студія</a>
-            </li>
-            <li>
-              <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li>
-              <a class="mobile-menu__link" href="#">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <div>
-          <ul class="mobile-contacts list">
-            <li>
-              <a class="mobile-menu__contacts-link-email" href="mailto:info@devstudio.com">
-                info@devstudio.com
-              </a>
-            </li>
-            <li>
-              <a class="mobile-menu__contacts-link-tel" href="+380961111111"> +38 096 111 11 11 </a>
-            </li>
-          </ul>
-
-          <ul class="mobile-menu__socials list">
-            <li>
-              <a class="mobile-menu__socials-link" href="#">Instagram</a>
-            </li>
-            <li>
-              <a class="mobile-menu__socials-link" href="#">Twitter</a>
-            </li>
-            <li>
-              <a class="mobile-menu__socials-link" href="#">Facebook</a>
-            </li>
-            <li>
-              <a class="mobile-menu__socials-link" href="#">LinkedIn</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
