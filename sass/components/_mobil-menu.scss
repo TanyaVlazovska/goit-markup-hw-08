@@ -18,8 +18,17 @@
     &__close-button {
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: 15px;
+        border: none;
+        background: none;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+        &:hover,
+        &:focus {
+                fill: var(--accent-color);
+            }
     }
+
 }
 
 .mobile-menu__nav {
@@ -105,7 +114,7 @@
         height: 0px;
         left: 214px;
         top: 726px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
         transform: rotate (90deg);
 
 }
