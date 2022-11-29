@@ -36,9 +36,16 @@ body {
 }
 
 .section {
-  padding: 94px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 p,
 h1,
 h2,
@@ -97,16 +104,20 @@ img {
 }
 
 .title {
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-
-.section__title {
-  margin-bottom: 50px;
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 /*--------------Модальне вікно----------- */
@@ -188,7 +199,7 @@ img {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -344,11 +355,19 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
+  padding-left: 12px;
   margin-bottom: 30px;
   margin-top: 20px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-input {
@@ -823,7 +842,7 @@ textarea {
     -webkit-box-align: column;
         -ms-flex-align: column;
             align-items: column;
-    margin-left: 10px;
+    gap: 10px;
   }
 }
 @media screen and (min-width: 1200px) {

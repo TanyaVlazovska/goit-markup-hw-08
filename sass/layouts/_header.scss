@@ -148,7 +148,7 @@
     @include tablet {
         display: flex;
         align-items: column;
-        margin-left: 10px;
+        gap: 10px;
     }
 
     @include desktop {
