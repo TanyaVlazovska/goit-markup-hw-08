@@ -32,7 +32,7 @@
   }
 
    .card-list__wrap {
-         display: flex;
+        display: flex;
         justify-content: center;
         align-items: center;
     
@@ -49,44 +49,28 @@
     margin-bottom: 10px;
     
     font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--title-text-color);
-        text-align: center;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+    text-align: center;
 
-        @include tablet {
+    @include tablet {
         text-align: left;
-   }
-
-
-
-   &__describe {
-       line-height: 1.71;
-       letter-spacing: 0.03em;
    }
 }
 
+   .card-list__describe {
+       line-height: 1.71;
+       letter-spacing: 0.03em;
+   }
 
 
-//    &__list .feature__item {
-//     width: 100%;
-//  }
+
+
 
   
 
-// &__describe {
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-//     text-transform: none;
-//     // font-size: 14px;
-//     // line-height: 1.7;
-//     // letter-spacing: 0.03em;
-//     // color: var(--color-icon);
-//     margin-bottom: 30px;
-// }
-
-// }
 
 
 
@@ -106,30 +90,7 @@
 
 
 
-// .card-list__link {
-//     margin-bottom: 30px;
-//     width: 100%;
-//     height: 120px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background: #f5f4fa;
-//     border-radius: 4px;
-// }
 
-// .card-list__title {
-//     margin-bottom: 10px;
 
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.03em;
-//     text-transform: uppercase;
-//     color: var(--title-text-color);
-// }
-
-// .card-list__describe {
-//     line-height: 1.71;
-//     letter-spacing: 0.03em;
-//     text-transform: none; }
     
 
