@@ -834,14 +834,18 @@ textarea {
   }
 }
 
+.contacts {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: column;
-        -ms-flex-align: column;
-            align-items: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
   }
 }
@@ -884,6 +888,28 @@ textarea {
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.contacts__icon--email {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--email {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.contacts__icon--phone {
+  width: 10px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon--phone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 /*------- Герой -----------------*/
@@ -1446,7 +1472,6 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 60px;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
@@ -1475,6 +1500,7 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 60px;
+  margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .footer__info {
